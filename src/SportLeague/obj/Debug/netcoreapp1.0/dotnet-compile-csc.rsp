@@ -175,6 +175,8 @@
 "C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Startup.cs"
 "C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Controllers\DivisionsController.cs"
 "C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Controllers\HomeController.cs"
+"C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Controllers\PlayersController.cs"
+"C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Controllers\TeamsController.cs"
 "C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Models\Division.cs"
 "C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Models\Player.cs"
 "C:\Users\epicodus\Desktop\SportLeague\src\SportLeague\Models\SportsLeagueContext.cs"
