@@ -9,7 +9,7 @@
     <ul>
         @foreach(var divisionItem in Model)
         {
-            <li>@Html.DisplayFor(modelItem => divisionItem.description) | @Html.ActionLink("Details", "Details", new { id = divisionItem.divisionId })</li>
+            <li>@Html.DisplayFor(modelItem => divisionItem.description) | @Html.ActionLink("Details", "Details", new { id = divisionItem.divisionId }) | @Html.ActionLink("Delete", "Delete", new { id = divisionItem.divisionId })</li>
 
         }
     </ul>
