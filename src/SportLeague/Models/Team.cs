@@ -23,5 +23,7 @@ namespace SportLeague.Models
         public int divisionId { get; set; }
 
         public virtual ICollection<Player> Player { get; set; }
+
+        public virtual Division Division { get; set; }
     }
 }

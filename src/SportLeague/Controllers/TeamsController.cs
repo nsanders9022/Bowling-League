@@ -23,7 +23,7 @@ namespace SportLeague.Controllers
 
         public IActionResult Details(int id)
         {
-            var thisTeam = db.Teams.Include(teams => teams.Player).FirstOrDefault(teams => teams.teamId == id);
+            var thisTeam = db.Teams.Include(teams => teams.Player).Include(teams => teams.Division).FirstOrDefault(teams => teams.teamId == id);
             return View(thisTeam);
         }
 
