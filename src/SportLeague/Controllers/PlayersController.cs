@@ -21,5 +21,11 @@ namespace SportLeague.Controllers
             return View(db.Players.ToList());
         }
 
+        public IActionResult Details(int id)
+        {
+            var thisPlayer = db.Players.FirstOrDefault(players => players.playerId == id);
+            return View(thisPlayer);
+        }
+
     }
 }

@@ -1,0 +1,14 @@
+﻿@model SportLeague.Models.Team
+
+@{
+    ViewData["Title"] = "Division Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Details</h2>
+<hr />
+<h4>Team name: @Html.DisplayFor(model => model.name)</h4>
+
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
