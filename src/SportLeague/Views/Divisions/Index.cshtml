@@ -4,12 +4,11 @@
     ViewData["Title"] = "Divisions Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <h2>Bowling Divisions</h2>
     <h4>@Html.DisplayNameFor(model =>model.description)</h4>
     <ul>
         @foreach(var divisionItem in Model)
         {
-            <li>@Html.DisplayFor(modelItem => divisionItem.description) | @Html.ActionLink("Details", "Details", new { id = divisionItem.divisionId }) | @Html.ActionLink("Delete", "Delete", new { id = divisionItem.divisionId })</li>
+            <li>@Html.DisplayFor(modelItem => divisionItem.description) | @Html.ActionLink("Details", "Details", new { id = divisionItem.divisionId }) | @Html.ActionLink("Delete", "Delete", new { id = divisionItem.divisionId }) | @Html.ActionLink("Edit", "Edit", new { id = divisionItem.divisionId })</li>
 
         }
     </ul>

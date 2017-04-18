@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Edit player";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SportLeague.Models.Player
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this task: @Html.DisplayFor(model => model.name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.playerId)
+
+    <label>Name</label>
+    @Html.EditorFor(model => model.name)
+
+    <label>Team</label>
+    @Html.DropDownList("teamId")
+
+    <input type="submit" value="Save" />
+}

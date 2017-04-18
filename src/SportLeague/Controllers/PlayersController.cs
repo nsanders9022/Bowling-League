@@ -40,6 +40,35 @@ namespace SportLeague.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(int id)
+        {
+            var thisPlayer = db.Players.FirstOrDefault(players => players.playerId == id);
+            return View(thisPlayer);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisPlayer = db.Players.FirstOrDefault(players => players.playerId == id);
+            db.Players.Remove(thisPlayer);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ViewBag.teamId = new SelectList(db.Teams, "teamId", "name");
+            var thisPlayer = db.Players.FirstOrDefault(players => players.playerId == id);
+            return View(thisPlayer);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Player player)
+        {
+            db.Entry(player).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
     }
 }

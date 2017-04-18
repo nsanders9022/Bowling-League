@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Edit division";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SportLeague.Models.Division
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this task: @Html.DisplayFor(model => model.description)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.divisionId)
+
+    <label>Description</label>
+    @Html.EditorFor(model => model.description)
+
+    <label>Skill Level</label>
+    @Html.EditorFor(model => model.skill_level)
+
+    <label>Maximum number of teams</label>
+    @Html.EditorFor(model => model.max_team)
+
+    <input type="submit" value="Save" />
+}
