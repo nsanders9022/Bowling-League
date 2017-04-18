@@ -17,6 +17,7 @@ namespace SportLeague.Models
         public int playerId { get; set; }
         public string name { get; set; }
         public int teamId { get; set; }
+        public virtual Team Team { get; set; }
 
     }
 }

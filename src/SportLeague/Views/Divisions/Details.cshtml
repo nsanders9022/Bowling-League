@@ -1,5 +1,4 @@
-﻿
-@model SportLeague.Models.Division
+﻿@model SportLeague.Models.Division
 
 @{
     ViewData["Title"] = "Division Details";
@@ -10,7 +9,10 @@
 <h2>Details</h2>
 <hr />
 <h4>Description:@Html.DisplayFor(model => model.description)</h4>
+<h5>Max Team:@Html.DisplayFor(model => model.max_team)</h5>
+<h5>Teams:</h5>
+    @foreach(var team in Model.Team)
+    { <li>@team.name</li>}
 
-<h4>Skill Level: @Html.DisplayFor(model => model.skill_level)</h4> 
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

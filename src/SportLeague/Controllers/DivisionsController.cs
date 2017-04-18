@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SportLeague.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Diagnostics;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,7 +24,7 @@ namespace SportLeague.Controllers
 
         public IActionResult Details(int id)
         {
-            var thisDivision = db.Divisions.FirstOrDefault(divisions => divisions.divisionId == id);
+            var thisDivision = db.Divisions.Include(divisions => divisions.Team).FirstOrDefault(divisions => divisions.divisionId == id);
             return View(thisDivision);
         }
 

@@ -10,6 +10,10 @@
 <hr />
 <h4>Team name: @Html.DisplayFor(model => model.name)</h4>
 <h4>Division Id: @Html.DisplayFor(model => model.divisionId)</h4>
+<h5>Players:</h5>
+@foreach (var player in Model.Player)
+{ <li>@player.name</li>}
+
 
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

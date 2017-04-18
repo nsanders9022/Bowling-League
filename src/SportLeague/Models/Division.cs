@@ -12,11 +12,16 @@ namespace SportLeague.Models
     [Table("Divisions")]
     public class Division
     {
-       
+        public Division()
+        {
+            this.Team = new HashSet<Team>();
+        }
+
         [Key]
         public int divisionId { get; set; }
         public string skill_level { get; set; }
         public int max_team { get; set; }
         public string description { get; set; }
+        public virtual ICollection<Team> Team { get; set; }
     }
 }
