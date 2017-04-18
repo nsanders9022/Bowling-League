@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Make new team";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SportLeague.Models.Team
+
+<h6>Add a new division</h6>
+@using (Html.BeginForm())
+{
+    <label>Team name</label>
+    @Html.TextBoxFor(model => model.name)
+    <label>Division</label>
+    @Html.DropDownList("divisionId")
+    <input class="btn btn-success" type="submit" value="Submit" />
+}

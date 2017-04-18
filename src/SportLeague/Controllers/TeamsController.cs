@@ -27,5 +27,19 @@ namespace SportLeague.Controllers
             return View(thisTeam);
         }
 
+        public IActionResult Create()
+        {
+            ViewBag.divisionId = new SelectList(db.Divisions, "divisionId", "description");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Team team)
+        {
+            db.Teams.Add(team);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
