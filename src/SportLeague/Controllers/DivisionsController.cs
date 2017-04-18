@@ -21,7 +21,13 @@ namespace SportLeague.Controllers
             return View(db.Divisions.ToList());
         }
 
+        public IActionResult Details(int id)
+        {
+            var thisDivision = db.Divisions.FirstOrDefault(divisions => divisions.divisionId == id);
+            return View(thisDivision);
+        }
 
-        //var thisDivision = db.Divisions.FirstOrDefault(divisions => divisions.divisionId == id)
+
+
     }
 }

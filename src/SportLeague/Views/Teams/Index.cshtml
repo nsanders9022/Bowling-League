@@ -1,10 +1,9 @@
-﻿@model IEnumerable<SportLeague.Models.Team>
+﻿@model IEnumerable<SportLeague.Models.Player>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Seattle Bowling Legue</title>
-</head>
-<body>
+@{
+    ViewData["Title"] = "Teams Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
     <h2>Bowling Divisions</h2>
     <h4>@Html.DisplayNameFor(model => model.name)</h4>
     <ul>
@@ -14,5 +13,3 @@
 
         }
     </ul>
-</body>
-</html>
