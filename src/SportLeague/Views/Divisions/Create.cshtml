@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Make new division";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SportLeague.Models.Division
+
+<h6>Add a new division</h6>
+@using (Html.BeginForm())
+{
+    <label>Skill Level</label>
+    @Html.TextBoxFor(model => model.skill_level)
+    <label>Maximum number of teams</label>
+    @Html.TextBoxFor(model => model.max_team )
+    <label>Description</label>
+    @Html.TextAreaFor(model => model.description)
+    <input class="btn btn-success" type="submit" value="Submit" />
+}

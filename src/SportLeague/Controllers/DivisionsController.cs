@@ -27,6 +27,18 @@ namespace SportLeague.Controllers
             return View(thisDivision);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Division division)
+        {
+            db.Divisions.Add(division);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
 
     }
